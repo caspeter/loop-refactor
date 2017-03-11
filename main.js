@@ -4,7 +4,7 @@
 
 Refactor the following functions. Use higher-order functions rather than for-loops.
 
-Choose from the following higher-order functions: every, some
+Choose from the following higher-order functions: every
 
 Run the command 'mocha' to test. Tests check for expected output and absence of for-loops.
 
@@ -34,15 +34,9 @@ module.exports = {
   },
 
   objContainsProp: (arr, prop) => {
-    // return arr.(item =>{
-
-    // })
-    // for (var i = 0; i < arr.length; i++){
-    //   if(!arr[i].hasOwnProperty(prop)){
-    //     return false;
-    //   }
-    // }
-    // return true;
+    return arr.every((item) =>{
+      return item.hasOwnProperty(prop);
+    });
   },
 
   stringMatch: (arr, str) => {
