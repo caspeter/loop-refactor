@@ -19,15 +19,9 @@ module.exports = {
   },
 
   someObjsContainProp: (arr, prop) => {
-    return arr.filter(num => {
+    return arr.some((num) => {
       return num.hasOwnProperty(prop);
-    })
-    // for(var i = 0; i < arr.length; i++){
-    //   if(arr[i].hasOwnProperty(prop)){
-    //     return true;
-    //   }
-    // }
-    // return false;
+    });
   },
 
   convertNameArrayToObject: (arr) => {
